@@ -478,3 +478,14 @@ a.carte:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--encre)}
 .photo .pill{z-index:1}
 .photo-credit{position:absolute;right:0;bottom:0;z-index:1;background:rgba(22,22,29,.72);color:var(--papier);font:400 10px/1.3 var(--texte);letter-spacing:0;text-transform:none;padding:3px 8px;border-top-left-radius:8px}
 .dest-hero .wrap>*,.coeur-large>*{min-width:0}
+/* Page départ : un encart par destination, comme dans la newsletter */
+.cartes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.carte .photo{aspect-ratio:16/9}
+.carte-dates{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.carte-dates li{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:baseline;padding:7px 0;border-top:2px dashed var(--sable);font:700 13px/1.3 var(--mono);letter-spacing:.04em}
+.carte-dates li:first-child{border-top:0}
+.carte-dates .r{color:#2B6CB0}
+.carte-dates .r.zero{color:#13795B}
+.carte-dates b{font:800 15px var(--texte)}
+@media (max-width:900px){.cartes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.cartes{grid-template-columns:minmax(0,1fr)}}
