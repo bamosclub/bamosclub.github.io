@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /reserver/
+Disallow: /editions/
+
+Sitemap: https://bamosclub.github.io/sitemap.xml
