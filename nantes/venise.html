@@ -50,12 +50,12 @@
 <div><div class="date-quand">VEN 18 → LUN 21 DÉC<small>3 NUITS</small></div><div class="date-tags"><span class="pill pill-ciel">1 RTT</span></div></div>
 <div class="date-vol"><b>Aller</b> ven. 21 h 55, arrivée 23 h 55 · <b>Retour</b> lun., arrivée à Nantes 16 h 20<br>Volotea V7 2212 / V7 2213</div>
 <div class="date-prix"><span class="prix">118 €</span>aller-retour<br>par personne</div>
-<a class="btn btn-primaire" href="/reserver/nantes-venise-2026-12-18">Réserver ce weekend</a>
+<span class="btn btn-primaire" role="link" tabindex="0" data-o="L3Jlc2VydmVyL25hbnRlcy12ZW5pc2UtMjAyNi0xMi0xOA==">Réserver ce weekend</span>
 </div><div class="date-ligne">
 <div><div class="date-quand">VEN 25 → LUN 28 DÉC<small>3 NUITS</small></div><div class="date-tags"><span class="pill pill-ciel">1 RTT</span></div></div>
 <div class="date-vol"><b>Aller</b> ven. 21 h 55, arrivée 23 h 55 · <b>Retour</b> lun., arrivée à Nantes 16 h 20<br>Volotea V7 2212 / V7 2213</div>
 <div class="date-prix"><span class="prix">154 €</span>aller-retour<br>par personne</div>
-<a class="btn btn-primaire" href="/reserver/nantes-venise-2026-12-25">Réserver ce weekend</a>
+<span class="btn btn-primaire" role="link" tabindex="0" data-o="L3Jlc2VydmVyL25hbnRlcy12ZW5pc2UtMjAyNi0xMi0yNQ==">Réserver ce weekend</span>
 </div></div>
 </div></section>
 
@@ -152,5 +152,26 @@
 <div class="pied-legal"><span>Certains liens sont affiliés : si tu réserves avec eux, Bamos touche une commission. Prix relevés chaque matin, ils peuvent changer à tout moment.</span><span class="made">© 2026 Bamos · Made in Rezé with <svg class="coeur" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true"><path d="M26 41s-13-7.6-13-17a7 7 0 0 1 13-3.6A7 7 0 0 1 39 24c0 9.4-13 17-13 17z" fill="#FF5A36"/><g fill="none" stroke="#FFF9EC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 39s-13-7.6-13-17a7 7 0 0 1 13-3.6A7 7 0 0 1 37 22c0 9.4-13 17-13 17z"/></g></svg></span></div>
 </div></footer>
 
+<script>
+(function () {
+  function ouvrir(e, el, onglet) {
+    var url = atob(el.getAttribute("data-o"));
+    if (onglet) { window.open(url, "_blank", "noopener"); } else { window.location.href = url; }
+    e.preventDefault();
+  }
+  document.addEventListener("click", function (e) {
+    var el = e.target.closest("[data-o]");
+    if (el) { ouvrir(e, el, e.metaKey || e.ctrlKey); }
+  });
+  document.addEventListener("auxclick", function (e) {
+    var el = e.target.closest("[data-o]");
+    if (el && e.button === 1) { ouvrir(e, el, true); }
+  });
+  document.addEventListener("keydown", function (e) {
+    var el = e.target.closest && e.target.closest("[data-o]");
+    if (el && e.key === "Enter") { ouvrir(e, el, false); }
+  });
+})();
+</script>
 </body>
 </html>
