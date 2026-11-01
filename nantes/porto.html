@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" href="/branding/favicon-64.png">
 <link rel="preload" href="/assets/fonts/bagel-fat-one-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.444b1055.css">
+<link rel="stylesheet" href="/assets/site.39ab0dbc.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "https://bamosclub.com/", "name": "Accueil", "position": 1}, {"@type": "ListItem", "item": "https://bamosclub.com/nantes", "name": "Nantes", "position": 2}, {"@type": "ListItem", "item": "https://bamosclub.com/nantes/porto", "name": "Porto", "position": 3}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Pour le weekend du 25 d\u00e9cembre au 28 d\u00e9cembre, vol direct compris, compte environ 280 \u20ac en auberge de jeunesse, 440 \u20ac en h\u00f4tel bien not\u00e9 et 580 \u20ac en h\u00f4tel 4 \u00e9toiles par personne, pour deux voyageurs qui partagent la chambre."}, "name": "Combien co\u00fbte un weekend \u00e0 Porto depuis Nantes ?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Volotea, selon les jours et la saison. Le tableau ci-dessus est mis \u00e0 jour chaque matin."}, "name": "Quelles compagnies font Nantes-Porto en direct ?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Environ 1 h 45 de vol direct entre Nantes-Atlantique et A\u00e9roport de Porto Francisco S\u00e1 Carneiro."}, "name": "Combien de temps dure le vol ?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "M\u00e9tro ligne E (violette) relie l\u0027a\u00e9roport \u00e0 Trindade (centre, correspondance avec toutes les lignes) en 30 minutes environ, pour 2,90\u00a0\u20ac l\u0027aller."}, "name": "Comment aller de l\u0027a\u00e9roport au centre de Porto ?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "De novembre \u00e0 mars, hors f\u00eates : un h\u00f4tel bien not\u00e9 co\u00fbte environ 64\u00a0\u20ac la nuit, contre environ 165\u00a0\u20ac d\u0027avril \u00e0 octobre."}, "name": "Quand partir \u00e0 Porto pas cher ?"}]}</script>
 
@@ -49,7 +49,7 @@
 <p>Prix aller-retour par personne, petit sac sous le siège compris. Le bagage cabine coûte environ 22 € de plus par trajet.</p></div>
 <div class="dates"><div class="date-ligne top">
 <div><div class="date-quand">VEN 25 → LUN 28 DÉC<small>3 NUITS</small></div><div class="date-tags"><span class="pill pill-ciel">1 RTT</span></div></div>
-<div class="date-vol"><b>Aller</b> ven. 13 h 20, arrivée 14 h 05 · <b>Retour</b> lun., arrivée à Nantes 16 h 15<br>Volotea V7 2240 / V7 2241</div>
+<div class="date-vol"><b>Aller</b> ven. 13 h 20, arrivée 14 h 05 · <b>Retour</b> lun., arrivée à Nantes 16 h 15<br>Volotea V7 2240 / V7 2241<br><span class="lien partage" role="link" tabindex="0" data-o="aHR0cHM6Ly93YS5tZS8/dGV4dD1Qb3J0byUyQyUyMGR1JTIwdmVuLiUyMDI1JTIwYXUlMjBsdW4uJTIwMjglMjBkJUMzJUE5Yy4lQzIlQTAlM0ElMjAxNjQlQzIlQTAlRTIlODIlQUMlMjBsJUUyJTgwJTk5YWxsZXItcmV0b3VyJTIwZGVwdWlzJTIwTmFudGVzJTJDJTIwYXZlYyUyMDElMjBSVFQuJTIwT24lMjB5JTIwdmElQzIlQTAlM0YlMjBodHRwcyUzQSUyRiUyRmJhbW9zY2x1Yi5jb20lMkZuYW50ZXMlMkZwb3J0byUzRnMlM0RwYXJ0YWdl" data-nt="1">Envoie ce weekend à ton +1</span></div>
 <div class="date-prix"><span class="prix">164 €</span>aller-retour<br>par personne</div>
 <span class="btn btn-primaire" role="link" tabindex="0" data-o="L3Jlc2VydmVyL25hbnRlcy1wb3J0by0yMDI2LTEyLTI1">Réserver ce weekend</span>
 </div></div>
@@ -150,18 +150,18 @@
 </div></footer>
 
 <script>
-// Provenance des inscrits : le paramètre ?s= de l'adresse d'arrivée (sinon utm_source) est gardé pour la visite,
-// puis ajouté devant l'emplacement du formulaire dans le champ SOURCE envoyé à Brevo (ex. « reddit|landing-hero »).
+// Provenance des inscrits : le paramètre ?s= de l'adresse d'arrivée (sinon utm_source), gardé pour la visite
+// (sessionStorage), devant l'emplacement du formulaire dans le champ SOURCE : « reddit|landing-hero ».
+// Sans paramètre : « direct|landing-hero ».
 (function () {
   var canal = null;
   try {
     var p = new URLSearchParams(window.location.search);
     canal = (p.get("s") || p.get("utm_source") || "").toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 30) || null;
-    if (canal) { localStorage.setItem("bamos_s", canal); } else { canal = localStorage.getItem("bamos_s"); }
+    if (canal) { sessionStorage.setItem("bamos_s", canal); } else { canal = sessionStorage.getItem("bamos_s"); }
   } catch (e) { /* stockage bloqué : seul le paramètre de cette page compte */ }
-  if (!canal) { return; }
   document.querySelectorAll('input[name="SOURCE"]').forEach(function (champ) {
-    if (champ.value.indexOf("|") === -1) { champ.value = canal + "|" + champ.value; }
+    if (champ.value.indexOf("|") === -1) { champ.value = (canal || "direct") + "|" + champ.value; }
   });
 })();
 </script>

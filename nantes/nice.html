@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" href="/branding/favicon-64.png">
 <link rel="preload" href="/assets/fonts/bagel-fat-one-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.444b1055.css">
+<link rel="stylesheet" href="/assets/site.39ab0dbc.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "https://bamosclub.com/", "name": "Accueil", "position": 1}, {"@type": "ListItem", "item": "https://bamosclub.com/nantes", "name": "Nantes", "position": 2}, {"@type": "ListItem", "item": "https://bamosclub.com/nantes/nice", "name": "Nice", "position": 3}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Pour le weekend du 18 d\u00e9cembre au 20 d\u00e9cembre, vol direct compris, compte environ 305 \u20ac en auberge de jeunesse, 365 \u20ac en h\u00f4tel bien not\u00e9 et 455 \u20ac en h\u00f4tel 4 \u00e9toiles par personne, pour deux voyageurs qui partagent la chambre."}, "name": "Combien co\u00fbte un weekend \u00e0 Nice depuis Nantes ?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Volotea, selon les jours et la saison. Le tableau ci-dessus est mis \u00e0 jour chaque matin."}, "name": "Quelles compagnies font Nantes-Nice en direct ?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Environ 1 h 35 de vol direct entre Nantes-Atlantique et A\u00e9roport Nice C\u00f4te d\u0027Azur."}, "name": "Combien de temps dure le vol ?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Tramway ligne 2 relie l\u0027a\u00e9roport \u00e0 Jean M\u00e9decin (centre-ville) en 30 minutes environ, pour 10\u00a0\u20ac l\u0027aller ou 10\u00a0\u20ac l\u0027aller-retour."}, "name": "Comment aller de l\u0027a\u00e9roport au centre de Nice ?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "De novembre \u00e0 mars, hors f\u00eates : un h\u00f4tel bien not\u00e9 co\u00fbte environ 120\u00a0\u20ac la nuit, contre environ 180\u00a0\u20ac d\u0027avril \u00e0 octobre."}, "name": "Quand partir \u00e0 Nice pas cher ?"}]}</script>
 
@@ -49,7 +49,7 @@
 <p>Prix aller-retour par personne, petit sac sous le siège compris. Le bagage cabine coûte environ 22 € de plus par trajet.</p></div>
 <div class="dates"><div class="date-ligne top">
 <div><div class="date-quand">VEN 18 → DIM 20 DÉC<small>2 NUITS</small></div><div class="date-tags"><span class="pill pill-ciel">1 RTT</span></div></div>
-<div class="date-vol"><b>Aller</b> ven. 10 h 50, arrivée 12 h 25 · <b>Retour</b> dim., arrivée à Nantes 19 h 10<br>Volotea V7 2646 / V7 2647</div>
+<div class="date-vol"><b>Aller</b> ven. 10 h 50, arrivée 12 h 25 · <b>Retour</b> dim., arrivée à Nantes 19 h 10<br>Volotea V7 2646 / V7 2647<br><span class="lien partage" role="link" tabindex="0" data-o="aHR0cHM6Ly93YS5tZS8/dGV4dD1OaWNlJTJDJTIwZHUlMjB2ZW4uJTIwMTglMjBhdSUyMGRpbS4lMjAyMCUyMGQlQzMlQTljLiVDMiVBMCUzQSUyMDIwNyVDMiVBMCVFMiU4MiVBQyUyMGwlRTIlODAlOTlhbGxlci1yZXRvdXIlMjBkZXB1aXMlMjBOYW50ZXMlMkMlMjBhdmVjJTIwMSUyMFJUVC4lMjBPbiUyMHklMjB2YSVDMiVBMCUzRiUyMGh0dHBzJTNBJTJGJTJGYmFtb3NjbHViLmNvbSUyRm5hbnRlcyUyRm5pY2UlM0ZzJTNEcGFydGFnZQ==" data-nt="1">Envoie ce weekend à ton +1</span></div>
 <div class="date-prix"><span class="prix">207 €</span>aller-retour<br>par personne</div>
 <span class="btn btn-primaire" role="link" tabindex="0" data-o="L3Jlc2VydmVyL25hbnRlcy1uaWNlLTIwMjYtMTItMTg=">Réserver ce weekend</span>
 </div></div>
@@ -151,18 +151,18 @@
 </div></footer>
 
 <script>
-// Provenance des inscrits : le paramètre ?s= de l'adresse d'arrivée (sinon utm_source) est gardé pour la visite,
-// puis ajouté devant l'emplacement du formulaire dans le champ SOURCE envoyé à Brevo (ex. « reddit|landing-hero »).
+// Provenance des inscrits : le paramètre ?s= de l'adresse d'arrivée (sinon utm_source), gardé pour la visite
+// (sessionStorage), devant l'emplacement du formulaire dans le champ SOURCE : « reddit|landing-hero ».
+// Sans paramètre : « direct|landing-hero ».
 (function () {
   var canal = null;
   try {
     var p = new URLSearchParams(window.location.search);
     canal = (p.get("s") || p.get("utm_source") || "").toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 30) || null;
-    if (canal) { localStorage.setItem("bamos_s", canal); } else { canal = localStorage.getItem("bamos_s"); }
+    if (canal) { sessionStorage.setItem("bamos_s", canal); } else { canal = sessionStorage.getItem("bamos_s"); }
   } catch (e) { /* stockage bloqué : seul le paramètre de cette page compte */ }
-  if (!canal) { return; }
   document.querySelectorAll('input[name="SOURCE"]').forEach(function (champ) {
-    if (champ.value.indexOf("|") === -1) { champ.value = canal + "|" + champ.value; }
+    if (champ.value.indexOf("|") === -1) { champ.value = (canal || "direct") + "|" + champ.value; }
   });
 })();
 </script>

@@ -493,3 +493,5 @@ a.carte:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--encre)}
 [data-o]{cursor:pointer}
 span.lien[data-o]{text-decoration:underline;font-weight:700}
 [data-o]:focus-visible{outline:3px solid var(--canari);outline-offset:2px}
+/* « Envoie ce weekend à ton +1 » sous chaque date */
+.date-vol .partage{display:inline-block;margin-top:8px;font-size:14px}

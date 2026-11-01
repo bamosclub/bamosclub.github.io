@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" href="/branding/favicon-64.png">
 <link rel="preload" href="/assets/fonts/bagel-fat-one-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.444b1055.css">
+<link rel="stylesheet" href="/assets/site.39ab0dbc.css">
 
 </head>
 <body>
@@ -99,18 +99,18 @@
 </div></footer>
 
 <script>
-// Provenance des inscrits : le paramètre ?s= de l'adresse d'arrivée (sinon utm_source) est gardé pour la visite,
-// puis ajouté devant l'emplacement du formulaire dans le champ SOURCE envoyé à Brevo (ex. « reddit|landing-hero »).
+// Provenance des inscrits : le paramètre ?s= de l'adresse d'arrivée (sinon utm_source), gardé pour la visite
+// (sessionStorage), devant l'emplacement du formulaire dans le champ SOURCE : « reddit|landing-hero ».
+// Sans paramètre : « direct|landing-hero ».
 (function () {
   var canal = null;
   try {
     var p = new URLSearchParams(window.location.search);
     canal = (p.get("s") || p.get("utm_source") || "").toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 30) || null;
-    if (canal) { localStorage.setItem("bamos_s", canal); } else { canal = localStorage.getItem("bamos_s"); }
+    if (canal) { sessionStorage.setItem("bamos_s", canal); } else { canal = sessionStorage.getItem("bamos_s"); }
   } catch (e) { /* stockage bloqué : seul le paramètre de cette page compte */ }
-  if (!canal) { return; }
   document.querySelectorAll('input[name="SOURCE"]').forEach(function (champ) {
-    if (champ.value.indexOf("|") === -1) { champ.value = canal + "|" + champ.value; }
+    if (champ.value.indexOf("|") === -1) { champ.value = (canal || "direct") + "|" + champ.value; }
   });
 })();
 </script>
