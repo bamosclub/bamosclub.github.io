@@ -120,12 +120,8 @@
 <div class="faq"><details><summary>C&#39;est quoi, Bamos ?</summary><p>Bamos est une newsletter gratuite qui t&#39;envoie chaque jeudi les vols directs aux bons horaires pour partir en weekend, au départ de Nantes. Chaque bon plan donne les numéros de vol, les congés à poser et le budget complet, de l&#39;auberge de jeunesse à l&#39;hôtel 4 étoiles.</p></details><details><summary>Comment trouver un vol pas cher pour un weekend ?</summary><p>Cherche un vol direct qui part le vendredi soir ou le samedi et revient le dimanche soir ou le lundi à l&#39;aube, puis compare plusieurs weekends plutôt qu&#39;une seule date. Les comparateurs affichent d&#39;abord le vol le moins cher, souvent un mardi à 6 h : il faut tester les dates une par une. Bamos fait ce tri pour toi chaque semaine.</p></details><details><summary>Comment partir en weekend sans poser de congés ?</summary><p>Il te faut un aller le vendredi après 19 h ou le samedi, et un retour le dimanche ou le lundi avec un atterrissage avant 9 h 30. Ces vols existent sur beaucoup de lignes directes, mais pas toutes les semaines. Dans Bamos, chaque weekend affiche le nombre de RTT à poser : 0, 0,5 ou 1, jours fériés compris.</p></details><details><summary>Combien coûte un weekend en avion ?</summary><p>Le logement pèse souvent plus que le vol. Exemple pour 2 nuits à Marseille en novembre, vol direct compris : environ 145 € en auberge de jeunesse, 140 € en hôtel bien noté et 270 € en hôtel 4 étoiles par personne. Bamos calcule ce budget complet pour chaque weekend, navette depuis l&#39;aéroport comprise.</p></details><details><summary>Quand réserver un vol pour un weekend ?</summary><p>Le plus tôt possible : sur les lignes à bas prix, les tarifs montent à mesure que l&#39;avion se remplit, et les vols du vendredi soir partent vite. Le jour de la semaine où tu réserves compte peu, environ 2 % d&#39;écart. Ce qui compte, c&#39;est d&#39;être prévenu dès qu&#39;un bon weekend apparaît.</p></details><details><summary>La newsletter Bamos est-elle gratuite ?</summary><p>Oui, et elle le restera. Bamos touche une petite commission quand tu réserves avec ses liens. Pas de pub dans le mail, ton adresse n&#39;est jamais vendue ni partagée, et la désinscription se fait en un clic.</p></details></div>
 
 <div class="ailleurs" id="ailleurs"><div><h3>Tu ne pars pas de Nantes ?</h3><p>Dis-nous de quel aéroport. On ouvre d'abord les villes les plus demandées, et on te prévient le jour J.</p></div>
-<div style="display:flex;flex-direction:column;gap:10px"><form class="form" action="#" method="post"><select name="AEROPORT_SOUHAITE" aria-label="Ton aéroport de départ"><option>Rennes</option><option>Brest</option><option>Bordeaux</option><option>Paris (Orly, CDG, Beauvais)</option><option>Lyon</option><option>Toulouse</option><option>Lille</option><option>Marseille</option><option>Nice</option><option>Autre</option></select>
-<input type="email" name="EMAIL" placeholder="ton@email.fr" aria-label="Ton email" required>
-<input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
-<input type="hidden" name="locale" value="fr">
-<button class="btn btn-secondaire" type="submit">Préviens-moi</button></form>
-<p class="form-legal">Un seul mail, le jour où ton aéroport ouvre. Tu confirmes ton adresse par mail. <a href="/confidentialite">Confidentialité</a></p></div></div>
+<div style="display:flex;flex-direction:column;gap:10px"><a class="btn btn-secondaire" href="mailto:bonjour@bamosclub.com?subject=Pr%C3%A9viens-moi%20quand%20Bamos%20part%20de%20mon%20a%C3%A9roport">Préviens-moi par mail</a>
+<p class="form-legal">Écris-nous depuis ta boîte mail en indiquant ton aéroport : on te répond le jour où il ouvre. <a href="/confidentialite">Confidentialité</a></p></div></div>
 </div></section>
 </main>
 <section class="cta" id="inscription"><div class="wrap">
@@ -157,6 +153,22 @@
 <div class="pied-legal"><span>Certains liens sont affiliés : si tu réserves avec eux, Bamos touche une commission. Prix relevés chaque matin, ils peuvent changer à tout moment.</span><span class="made">© 2026 Bamos · Made in Rezé with <svg class="coeur" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true"><path d="M26 41s-13-7.6-13-17a7 7 0 0 1 13-3.6A7 7 0 0 1 39 24c0 9.4-13 17-13 17z" fill="#FF5A36"/><g fill="none" stroke="#FFF9EC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 39s-13-7.6-13-17a7 7 0 0 1 13-3.6A7 7 0 0 1 37 22c0 9.4-13 17-13 17z"/></g></svg></span></div>
 </div></footer>
 
+<script>
+// Provenance des inscrits : le paramètre ?s= de l'adresse d'arrivée (sinon utm_source) est gardé pour la visite,
+// puis ajouté devant l'emplacement du formulaire dans le champ SOURCE envoyé à Brevo (ex. « reddit|landing-hero »).
+(function () {
+  var canal = null;
+  try {
+    var p = new URLSearchParams(window.location.search);
+    canal = (p.get("s") || p.get("utm_source") || "").toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 30) || null;
+    if (canal) { localStorage.setItem("bamos_s", canal); } else { canal = localStorage.getItem("bamos_s"); }
+  } catch (e) { /* stockage bloqué : seul le paramètre de cette page compte */ }
+  if (!canal) { return; }
+  document.querySelectorAll('input[name="SOURCE"]').forEach(function (champ) {
+    if (champ.value.indexOf("|") === -1) { champ.value = canal + "|" + champ.value; }
+  });
+})();
+</script>
 <script>
 (function () {
   function ouvrir(e, el, onglet) {

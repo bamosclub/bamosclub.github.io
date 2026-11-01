@@ -175,6 +175,22 @@
 </div></footer>
 
 <script>
+// Provenance des inscrits : le paramètre ?s= de l'adresse d'arrivée (sinon utm_source) est gardé pour la visite,
+// puis ajouté devant l'emplacement du formulaire dans le champ SOURCE envoyé à Brevo (ex. « reddit|landing-hero »).
+(function () {
+  var canal = null;
+  try {
+    var p = new URLSearchParams(window.location.search);
+    canal = (p.get("s") || p.get("utm_source") || "").toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 30) || null;
+    if (canal) { localStorage.setItem("bamos_s", canal); } else { canal = localStorage.getItem("bamos_s"); }
+  } catch (e) { /* stockage bloqué : seul le paramètre de cette page compte */ }
+  if (!canal) { return; }
+  document.querySelectorAll('input[name="SOURCE"]').forEach(function (champ) {
+    if (champ.value.indexOf("|") === -1) { champ.value = canal + "|" + champ.value; }
+  });
+})();
+</script>
+<script>
 (function () {
   function ouvrir(e, el, onglet) {
     var url = atob(el.getAttribute("data-o"));
