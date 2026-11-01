@@ -495,3 +495,4 @@ span.lien[data-o]{text-decoration:underline;font-weight:700}
 [data-o]:focus-visible{outline:3px solid var(--canari);outline-offset:2px}
 /* « Envoie ce weekend à ton +1 » sous chaque date */
 .date-vol .partage{display:inline-block;margin-top:8px;font-size:14px}
+.partage .wa{display:inline-block;width:18px;height:18px;vertical-align:-4px;margin-right:6px}
