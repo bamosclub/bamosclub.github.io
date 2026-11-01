@@ -489,3 +489,7 @@ a.carte:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--encre)}
 .carte-dates b{font:800 15px var(--texte)}
 @media (max-width:900px){.cartes{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:600px){.cartes{grid-template-columns:minmax(0,1fr)}}
+/* Liens obfusqués (span role="link") : même apparence et même curseur que les liens */
+[data-o]{cursor:pointer}
+span.lien[data-o]{text-decoration:underline;font-weight:700}
+[data-o]:focus-visible{outline:3px solid var(--canari);outline-offset:2px}

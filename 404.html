@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" href="/branding/favicon-64.png">
 <link rel="preload" href="/assets/fonts/bagel-fat-one-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.0c13fbb0.css">
+<link rel="stylesheet" href="/assets/site.444b1055.css">
 
 </head>
 <body>
@@ -72,7 +72,7 @@
   }
   document.addEventListener("click", function (e) {
     var el = e.target.closest("[data-o]");
-    if (el) { ouvrir(e, el, e.metaKey || e.ctrlKey); }
+    if (el) { ouvrir(e, el, el.hasAttribute("data-nt") || e.metaKey || e.ctrlKey); }
   });
   document.addEventListener("auxclick", function (e) {
     var el = e.target.closest("[data-o]");
@@ -80,7 +80,7 @@
   });
   document.addEventListener("keydown", function (e) {
     var el = e.target.closest && e.target.closest("[data-o]");
-    if (el && e.key === "Enter") { ouvrir(e, el, false); }
+    if (el && e.key === "Enter") { ouvrir(e, el, el.hasAttribute("data-nt")); }
   });
 })();
 </script>
