@@ -500,3 +500,5 @@ span.lien[data-o]{text-decoration:underline;font-weight:700}
 .hero-inscription{display:flex;flex-direction:column;gap:10px;max-width:560px;margin:20px 0 22px}
 .hero-inscription-titre{font-weight:700;font-size:17px;line-height:1.4}
 .hub-hero .hero-inscription{margin-bottom:26px}
+/* Tableau de la page départ : option sans RTT d'un weekend, montrée seulement par le filtre « 0 RTT » */
+.board-ligne.alt{display:none}
