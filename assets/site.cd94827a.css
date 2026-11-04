@@ -496,3 +496,7 @@ span.lien[data-o]{text-decoration:underline;font-weight:700}
 /* « Envoie ce weekend à ton +1 » sous chaque date */
 .date-vol .partage{display:inline-block;margin-top:8px;font-size:14px}
 .partage .wa{display:inline-block;width:18px;height:18px;vertical-align:-4px;margin-right:6px}
+/* Inscription dans le hero des pages départ et weekend, au-dessus de la ligne de flottaison */
+.hero-inscription{display:flex;flex-direction:column;gap:10px;max-width:560px;margin:20px 0 22px}
+.hero-inscription-titre{font-weight:700;font-size:17px;line-height:1.4}
+.hub-hero .hero-inscription{margin-bottom:26px}
