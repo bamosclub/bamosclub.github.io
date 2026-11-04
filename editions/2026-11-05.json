@@ -1,6 +1,6 @@
 {
  "edition": "2026-11-05",
- "prix_releves_le": "2026-11-01",
+ "prix_releves_le": "2026-11-04",
  "weekends": [
   {
    "rang": 1,
@@ -8,11 +8,11 @@
    "iata": "MRS",
    "pays": "France",
    "aller": {
-    "date": "2026-11-27",
-    "jour": "vendredi",
-    "depart": "21:00",
+    "date": "2026-11-28",
+    "jour": "samedi",
+    "depart": "08:40",
     "compagnie": "Ryanair",
-    "vol": "FR6773"
+    "vol": "FR6477"
    },
    "retour": {
     "date": "2026-11-30",
@@ -23,11 +23,35 @@
     "vol": "FR6772"
    },
    "conges": 0.0,
-   "prix_vol_ar": 48,
+   "prix_vol_ar": 55,
    "url": "https://bamosclub.com/nantes/marseille"
   },
   {
    "rang": 2,
+   "destination": "Strasbourg",
+   "iata": "SXB",
+   "pays": "France",
+   "aller": {
+    "date": "2027-01-01",
+    "jour": "vendredi",
+    "depart": "13:45",
+    "compagnie": "Volotea",
+    "vol": "V7 2640"
+   },
+   "retour": {
+    "date": "2027-01-04",
+    "jour": "lundi",
+    "depart": "16:10",
+    "arrivee_nantes": "17:45",
+    "compagnie": "Volotea",
+    "vol": "V7 2641"
+   },
+   "conges": 1.0,
+   "prix_vol_ar": 81,
+   "url": "https://bamosclub.com/nantes/strasbourg"
+  },
+  {
+   "rang": 3,
    "destination": "Madrid",
    "iata": "MAD",
    "pays": "Espagne",
@@ -47,11 +71,11 @@
     "vol": "V7 2273"
    },
    "conges": 0.5,
-   "prix_vol_ar": 80,
+   "prix_vol_ar": 64,
    "url": "https://bamosclub.com/nantes/madrid"
   },
   {
-   "rang": 3,
+   "rang": 4,
    "destination": "Madrid",
    "iata": "MAD",
    "pays": "Espagne",
@@ -75,31 +99,79 @@
    "url": "https://bamosclub.com/nantes/madrid"
   },
   {
-   "rang": 4,
-   "destination": "Madrid",
-   "iata": "MAD",
+   "rang": 5,
+   "destination": "Barcelone",
+   "iata": "BCN",
    "pays": "Espagne",
    "aller": {
-    "date": "2026-11-27",
+    "date": "2027-01-01",
     "jour": "vendredi",
-    "depart": "18:15",
-    "compagnie": "Volotea",
-    "vol": "V7 2272"
+    "depart": "11:20",
+    "compagnie": "Vueling",
+    "vol": "VY8139"
    },
    "retour": {
-    "date": "2026-11-29",
-    "jour": "dimanche",
-    "depart": "21:05",
-    "arrivee_nantes": "22:45",
-    "compagnie": "Volotea",
-    "vol": "V7 2273"
+    "date": "2027-01-05",
+    "jour": "mardi",
+    "depart": "07:40",
+    "arrivee_nantes": "09:20",
+    "compagnie": "Vueling",
+    "vol": "VY8138"
    },
-   "conges": 0.5,
-   "prix_vol_ar": 97,
-   "url": "https://bamosclub.com/nantes/madrid"
+   "conges": 1.0,
+   "prix_vol_ar": 57,
+   "url": "https://bamosclub.com/nantes/barcelone"
   },
   {
-   "rang": 5,
+   "rang": 6,
+   "destination": "Barcelone",
+   "iata": "BCN",
+   "pays": "Espagne",
+   "aller": {
+    "date": "2027-01-01",
+    "jour": "vendredi",
+    "depart": "11:20",
+    "compagnie": "Vueling",
+    "vol": "VY8139"
+   },
+   "retour": {
+    "date": "2027-01-04",
+    "jour": "lundi",
+    "depart": "06:55",
+    "arrivee_nantes": "08:35",
+    "compagnie": "Vueling",
+    "vol": "VY8138"
+   },
+   "conges": 0.0,
+   "prix_vol_ar": 67,
+   "url": "https://bamosclub.com/nantes/barcelone"
+  },
+  {
+   "rang": 7,
+   "destination": "Londres",
+   "iata": "STN",
+   "pays": "Royaume-Uni",
+   "aller": {
+    "date": "2027-01-01",
+    "jour": "vendredi",
+    "depart": "09:40",
+    "compagnie": "Ryanair",
+    "vol": "FR2231"
+   },
+   "retour": {
+    "date": "2027-01-04",
+    "jour": "lundi",
+    "depart": "10:55",
+    "arrivee_nantes": "13:20",
+    "compagnie": "Ryanair",
+    "vol": "FR2232"
+   },
+   "conges": 0.5,
+   "prix_vol_ar": 116,
+   "url": "https://bamosclub.com/nantes/londres"
+  },
+  {
+   "rang": 8,
    "destination": "Londres",
    "iata": "STN",
    "pays": "Royaume-Uni",
@@ -119,11 +191,11 @@
     "vol": "FR2232"
    },
    "conges": 1.0,
-   "prix_vol_ar": 111,
+   "prix_vol_ar": 120,
    "url": "https://bamosclub.com/nantes/londres"
   },
   {
-   "rang": 6,
+   "rang": 9,
    "destination": "Londres",
    "iata": "STN",
    "pays": "Royaume-Uni",
@@ -143,35 +215,83 @@
     "vol": "FR2232"
    },
    "conges": 0.5,
-   "prix_vol_ar": 131,
+   "prix_vol_ar": 125,
    "url": "https://bamosclub.com/nantes/londres"
   },
   {
-   "rang": 7,
-   "destination": "Barcelone",
-   "iata": "BCN",
-   "pays": "Espagne",
+   "rang": 10,
+   "destination": "Montpellier",
+   "iata": "MPL",
+   "pays": "France",
    "aller": {
-    "date": "2026-12-11",
-    "jour": "vendredi",
-    "depart": "14:40",
+    "date": "2026-11-28",
+    "jour": "samedi",
+    "depart": "08:40",
     "compagnie": "Volotea",
-    "vol": "V7 2164"
+    "vol": "V7 2552"
    },
    "retour": {
-    "date": "2026-12-13",
-    "jour": "dimanche",
-    "depart": "21:00",
-    "arrivee_nantes": "22:40",
+    "date": "2026-11-30",
+    "jour": "lundi",
+    "depart": "06:45",
+    "arrivee_nantes": "08:05",
     "compagnie": "Volotea",
-    "vol": "V7 2165"
+    "vol": "V7 2125"
    },
-   "conges": 0.5,
-   "prix_vol_ar": 74,
-   "url": "https://bamosclub.com/nantes/barcelone"
+   "conges": 0.0,
+   "prix_vol_ar": 70,
+   "url": "https://bamosclub.com/nantes/montpellier"
   },
   {
-   "rang": 8,
+   "rang": 11,
+   "destination": "Montpellier",
+   "iata": "MPL",
+   "pays": "France",
+   "aller": {
+    "date": "2026-12-05",
+    "jour": "samedi",
+    "depart": "08:40",
+    "compagnie": "Volotea",
+    "vol": "V7 2552"
+   },
+   "retour": {
+    "date": "2026-12-07",
+    "jour": "lundi",
+    "depart": "06:45",
+    "arrivee_nantes": "08:05",
+    "compagnie": "Volotea",
+    "vol": "V7 2125"
+   },
+   "conges": 0.0,
+   "prix_vol_ar": 70,
+   "url": "https://bamosclub.com/nantes/montpellier"
+  },
+  {
+   "rang": 12,
+   "destination": "Montpellier",
+   "iata": "MPL",
+   "pays": "France",
+   "aller": {
+    "date": "2026-12-12",
+    "jour": "samedi",
+    "depart": "08:40",
+    "compagnie": "Volotea",
+    "vol": "V7 2552"
+   },
+   "retour": {
+    "date": "2026-12-14",
+    "jour": "lundi",
+    "depart": "06:45",
+    "arrivee_nantes": "08:05",
+    "compagnie": "Volotea",
+    "vol": "V7 2125"
+   },
+   "conges": 0.0,
+   "prix_vol_ar": 70,
+   "url": "https://bamosclub.com/nantes/montpellier"
+  },
+  {
+   "rang": 13,
    "destination": "Milan",
    "iata": "MXP",
    "pays": "Italie",
@@ -191,35 +311,83 @@
     "vol": "U2 3821"
    },
    "conges": 0.5,
-   "prix_vol_ar": 130,
+   "prix_vol_ar": 132,
    "url": "https://bamosclub.com/nantes/milan"
   },
   {
-   "rang": 9,
-   "destination": "Casablanca",
-   "iata": "CMN",
-   "pays": "Maroc",
+   "rang": 14,
+   "destination": "Palma de Majorque",
+   "iata": "PMI",
+   "pays": "Espagne",
    "aller": {
-    "date": "2026-11-19",
-    "jour": "jeudi",
-    "depart": "18:30",
-    "compagnie": "Royal Air Maroc",
-    "vol": "AT717"
+    "date": "2027-01-02",
+    "jour": "samedi",
+    "depart": "08:40",
+    "compagnie": "Volotea",
+    "vol": "V7 2800"
    },
    "retour": {
-    "date": "2026-11-23",
-    "jour": "lundi",
-    "depart": "07:15",
-    "arrivee_nantes": "10:50",
-    "compagnie": "Royal Air Maroc",
-    "vol": "AT716"
+    "date": "2027-01-05",
+    "jour": "mardi",
+    "depart": "08:20",
+    "arrivee_nantes": "10:10",
+    "compagnie": "Volotea",
+    "vol": "V7 2801"
    },
-   "conges": 2.0,
-   "prix_vol_ar": 186,
-   "url": "https://bamosclub.com/nantes/casablanca"
+   "conges": 1.5,
+   "prix_vol_ar": 63,
+   "url": "https://bamosclub.com/nantes/palma-de-majorque"
   },
   {
-   "rang": 10,
+   "rang": 15,
+   "destination": "Palma de Majorque",
+   "iata": "PMI",
+   "pays": "Espagne",
+   "aller": {
+    "date": "2026-12-19",
+    "jour": "samedi",
+    "depart": "08:40",
+    "compagnie": "Volotea",
+    "vol": "V7 2800"
+   },
+   "retour": {
+    "date": "2026-12-22",
+    "jour": "mardi",
+    "depart": "08:20",
+    "arrivee_nantes": "10:10",
+    "compagnie": "Volotea",
+    "vol": "V7 2801"
+   },
+   "conges": 1.5,
+   "prix_vol_ar": 85,
+   "url": "https://bamosclub.com/nantes/palma-de-majorque"
+  },
+  {
+   "rang": 16,
+   "destination": "Pise",
+   "iata": "PSA",
+   "pays": "Italie",
+   "aller": {
+    "date": "2027-01-01",
+    "jour": "vendredi",
+    "depart": "16:55",
+    "compagnie": "Volotea",
+    "vol": "V7 2234"
+   },
+   "retour": {
+    "date": "2027-01-04",
+    "jour": "lundi",
+    "depart": "19:20",
+    "arrivee_nantes": "21:20",
+    "compagnie": "Volotea",
+    "vol": "V7 2235"
+   },
+   "conges": 1.0,
+   "prix_vol_ar": 70,
+   "url": "https://bamosclub.com/nantes/pise"
+  },
+  {
+   "rang": 17,
    "destination": "Pise",
    "iata": "PSA",
    "pays": "Italie",
@@ -241,30 +409,6 @@
    "conges": 1.0,
    "prix_vol_ar": 75,
    "url": "https://bamosclub.com/nantes/pise"
-  },
-  {
-   "rang": 11,
-   "destination": "Palma de Majorque",
-   "iata": "PMI",
-   "pays": "Espagne",
-   "aller": {
-    "date": "2026-12-19",
-    "jour": "samedi",
-    "depart": "08:40",
-    "compagnie": "Volotea",
-    "vol": "V7 2800"
-   },
-   "retour": {
-    "date": "2026-12-22",
-    "jour": "mardi",
-    "depart": "08:20",
-    "arrivee_nantes": "10:10",
-    "compagnie": "Volotea",
-    "vol": "V7 2801"
-   },
-   "conges": 1.5,
-   "prix_vol_ar": 78,
-   "url": "https://bamosclub.com/nantes/palma-de-majorque"
   }
  ]
 }
