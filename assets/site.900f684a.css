@@ -61,7 +61,7 @@ section{padding:80px 0}
 .topbar{border-bottom:1px solid var(--filet);background:var(--papier);position:sticky;top:0;z-index:5}
 .topbar .wrap{display:flex;align-items:center;gap:28px;height:72px}
 .logo{display:flex;align-items:center;text-decoration:none}
-.logo svg{height:36px;width:auto}
+.logo svg{height:42px;width:auto}
 .nav{display:flex;gap:28px;margin-left:auto;align-items:center}
 .nav a{font-weight:600;text-decoration:none;font-size:17px}
 .nav a:not(.btn):hover{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}
@@ -75,35 +75,33 @@ section{padding:80px 0}
 .form-legal a{color:inherit;text-decoration:underline;text-underline-offset:2px}
 
 /* ===== Le tableau des départs à palettes (en-tête de l'accueil) ===== */
-.panneau{--fs:16px;--pal:calc(.8 * var(--fs) + 3px);background:var(--encre);color:var(--papier);border-radius:12px;padding:20px 20px 16px;font-family:var(--tableau);font-weight:700;container-type:inline-size}
+.panneau{--fs:18px;background:var(--encre);color:var(--papier);border-radius:12px;padding:20px 20px 16px;font-family:var(--tableau);font-weight:700;container-type:inline-size}
 .panneau-tete{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid #2E2E39}
 .panneau-titre{font:800 28px/1 var(--titre);color:var(--canari)}
 .panneau-lieu{font:600 16px/1.2 var(--texte);color:var(--sur-encre)}
 .panneau-maj{margin-left:auto;font:600 14px/1.2 var(--texte);color:#A9A9B3}
-.panneau-cols,.panneau-ligne{display:grid;grid-template-columns:calc(6 * var(--pal)) minmax(0,1fr) calc(10 * var(--pal)) calc(5 * var(--pal));gap:12px;align-items:center}
-.panneau-cols{font:600 14px/1 var(--texte);color:#8E8E99;padding:14px 6px 6px}
-.panneau-cols span:last-child{text-align:right}
-.panneau-ligne{padding:6px 6px;border-radius:6px;text-decoration:none;color:var(--papier);font-size:var(--fs)}
-.panneau-ligne:hover{background:#22222B}
-.panneau-ligne .p{justify-self:end}
-.volets{display:inline-flex;gap:3px;white-space:nowrap;overflow:hidden;max-width:100%}
-.f{position:relative;display:inline-block;width:.8em;height:1.45em;line-height:1.45em;font-weight:700;text-align:center;border-radius:3px;background:linear-gradient(var(--volet-haut) 0 50%,var(--volet-bas) 50% 100%);text-transform:uppercase}
-.f::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--fente)}
-.f.v{background:linear-gradient(#2E2E3A 0 50%,#24242E 50% 100%)}
-.panneau-ligne .p .f{color:var(--canari)}
-.panneau-ligne .r .f{color:#7FE3BD}
-.panneau-ligne .r.b .f{color:#A9DBFF}
+.panneau-cols,.panneau-ligne{display:grid;grid-template-columns:calc(5.4 * var(--fs)) minmax(0,1fr) calc(7.2 * var(--fs)) calc(4.6 * var(--fs));gap:8px;align-items:center}
+.panneau-cols{font:600 14px/1 var(--texte);color:#8E8E99;padding:14px 0 8px}
+.panneau-cols span{padding-left:.6em}
+.panneau-cols span:last-child{text-align:right;padding:0 .6em 0 0}
+.panneau-ligne{padding:4px 0;border-radius:6px;text-decoration:none;color:var(--papier);font-size:var(--fs)}
+.panneau-ligne:hover .tuile{background:linear-gradient(#3F3F4C 0 calc(50% - .5px),#0F0F14 calc(50% - .5px) calc(50% + .5px),#33333E calc(50% + .5px))}
+/* Une palette par case : la fente passe derrière le texte, l'espacement des lettres reste normal */
+.tuile{display:block;min-width:0;height:1.8em;padding:0 .45em;border-radius:4px;font:700 1em/1.8em var(--tableau);letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--papier);background:linear-gradient(#34343F 0 calc(50% - .5px),#0F0F14 calc(50% - .5px) calc(50% + .5px),#282832 calc(50% + .5px))}
+.tuile.p{color:var(--canari);text-align:right}
+.tuile.r{color:#7FE3BD}
+.tuile.r.b{color:#A9DBFF}
 .panneau-pied{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:14px;margin-top:8px;border-top:1px solid #2E2E39;font:400 15px/1.35 var(--texte);color:#A9A9B3}
 .panneau-pied a{color:var(--canari);font-weight:600}
-@keyframes volet{from{transform:rotateX(88deg)}to{transform:none}}
+@keyframes volet{from{transform:rotateX(75deg)}to{transform:none}}
 @media (prefers-reduced-motion:no-preference){
-  .panneau .f{animation:volet .26s cubic-bezier(.3,.7,.4,1) backwards;animation-delay:calc(var(--i,0) * 14ms)}
+  .panneau .tuile{animation:volet .3s cubic-bezier(.3,.7,.4,1) backwards;animation-delay:calc(var(--i,0) * 60ms)}
 }
 @container (max-width:470px){
-  .panneau-cols,.panneau-ligne{grid-template-columns:calc(6 * var(--pal)) minmax(0,1fr) calc(5 * var(--pal));gap:8px}
+  .panneau-cols,.panneau-ligne{grid-template-columns:calc(5.4 * var(--fs)) minmax(0,1fr) calc(4.6 * var(--fs))}
   .panneau-ligne .r,.panneau-cols .r{display:none}
 }
-@media (max-width:640px){.panneau{--fs:14px}}
+@media (max-width:640px){.panneau{--fs:15px}}
 
 /* ===== Accueil ===== */
 .landing-hero{padding:56px 0 80px;border-bottom:1px solid var(--filet)}
@@ -192,11 +190,14 @@ section{padding:80px 0}
 .pied a{color:var(--papier);text-decoration:none}
 .pied a:hover{text-decoration:underline}
 .pied-grille{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
-.pied .logo svg{height:34px}
+.pied .logo svg{height:38px}
 .pied h4{margin:0 0 14px;font:700 17px/1.2 var(--titre);color:var(--canari)}
 .pied ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:16px}
 .pied-texte{font-size:16px;color:var(--sur-encre);margin-top:16px;max-width:22em}
-.pied .pied-reseaux{flex-direction:row;flex-wrap:wrap;gap:6px 16px;margin-top:18px;font-weight:600}
+.pied .pied-reseaux{flex-direction:row;flex-wrap:wrap;gap:2px;margin:18px 0 0 -8px}
+.pied-reseaux a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:6px;color:var(--papier)}
+.pied-reseaux a:hover{color:var(--canari);background:#22222B}
+.pied-reseaux svg{width:22px;height:22px}
 .pied-legal{border-top:1px solid #34343F;margin-top:44px;padding-top:20px;font-size:14px;color:#A9A9B3;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .pied-legal>span:first-child{flex:1 1 520px}
 .made{white-space:nowrap}
@@ -372,7 +373,7 @@ span.lien[data-o]{text-decoration:underline}
   .wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
   section{padding:56px 0}
   .topbar .wrap{height:62px;gap:12px}
-  .logo svg{height:30px}
+  .logo svg{height:34px}
   .nav a:not(.btn){display:none}
   .nav .btn{min-height:40px;padding:0 12px;font-size:15px}
   .landing-hero{padding:28px 0 48px}
