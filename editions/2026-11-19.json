@@ -1,6 +1,6 @@
 {
  "edition": "2026-11-19",
- "prix_releves_le": "2026-11-18",
+ "prix_releves_le": "2026-11-19",
  "weekends": [
   {
    "rang": 1,
@@ -71,7 +71,7 @@
     "vol": "V7 2273"
    },
    "conges": 0.5,
-   "prix_vol_ar": 156,
+   "prix_vol_ar": 152,
    "url": "https://bamosclub.com/nantes/madrid"
   },
   {
@@ -95,7 +95,7 @@
     "vol": "FR6476"
    },
    "conges": 1.0,
-   "prix_vol_ar": 74,
+   "prix_vol_ar": 76,
    "url": "https://bamosclub.com/nantes/marseille"
   },
   {
@@ -119,7 +119,7 @@
     "vol": "FR6476"
    },
    "conges": 1.0,
-   "prix_vol_ar": 80,
+   "prix_vol_ar": 82,
    "url": "https://bamosclub.com/nantes/marseille"
   },
   {
@@ -143,7 +143,7 @@
     "vol": "FR6772"
    },
    "conges": 0.0,
-   "prix_vol_ar": 112,
+   "prix_vol_ar": 123,
    "url": "https://bamosclub.com/nantes/marseille"
   },
   {
@@ -191,7 +191,7 @@
     "vol": "V7 2647"
    },
    "conges": 0.5,
-   "prix_vol_ar": 136,
+   "prix_vol_ar": 140,
    "url": "https://bamosclub.com/nantes/nice"
   },
   {
@@ -215,7 +215,7 @@
     "vol": "FR2232"
    },
    "conges": 1.0,
-   "prix_vol_ar": 105,
+   "prix_vol_ar": 104,
    "url": "https://bamosclub.com/nantes/londres"
   },
   {
@@ -263,7 +263,7 @@
     "vol": "FR2232"
    },
    "conges": 0.5,
-   "prix_vol_ar": 121,
+   "prix_vol_ar": 117,
    "url": "https://bamosclub.com/nantes/londres"
   },
   {
@@ -335,7 +335,7 @@
     "vol": "V7 2125"
    },
    "conges": 0.0,
-   "prix_vol_ar": 82,
+   "prix_vol_ar": 86,
    "url": "https://bamosclub.com/nantes/montpellier"
   },
   {
