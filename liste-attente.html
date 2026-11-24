@@ -6,42 +6,56 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, follow">
 <title>Liste d’attente · Bamos</title>
-<link rel="icon" href="branding/favicon-64.png">
+<link rel="icon" type="image/png" href="/branding/favicon-64.png">
 <style>
-  :root { --canari: #FFD60A; --encre: #16161D; --papier: #FFF9EC; --blanc: #FFFFFF;
-          --secondaire: #3A3A44; --contour: 2px solid #16161D; --rayon: 16px;
-          --rayon-bouton: 12px; }
+@font-face { font-family: Barlow; font-style: normal; font-weight: 400; font-display: swap; src: url(/assets/fonts/barlow-400.woff2) format('woff2'); }
+@font-face { font-family: Barlow; font-style: normal; font-weight: 600; font-display: swap; src: url(/assets/fonts/barlow-600.woff2) format('woff2'); }
+@font-face { font-family: Barlow; font-style: normal; font-weight: 700; font-display: swap; src: url(/assets/fonts/barlow-700.woff2) format('woff2'); }
+@font-face { font-family: Barlow Semi Condensed; font-style: normal; font-weight: 700; font-display: swap; src: url(/assets/fonts/barlow-semi-condensed-700.woff2) format('woff2'); }
+@font-face { font-family: Barlow Semi Condensed; font-style: normal; font-weight: 800; font-display: swap; src: url(/assets/fonts/barlow-semi-condensed-800.woff2) format('woff2'); }
+@font-face { font-family: Barlow Condensed; font-style: normal; font-weight: 600; font-display: swap; src: url(/assets/fonts/barlow-condensed-600.woff2) format('woff2'); }
+@font-face { font-family: Barlow Condensed; font-style: normal; font-weight: 700; font-display: swap; src: url(/assets/fonts/barlow-condensed-700.woff2) format('woff2'); }
+
+  :root { --canari: #FFD60A; --encre: #16161D; --papier: #FFF9EC; --gris: #4A4A55;
+          --filet: #DDD8CD; --rayon-bouton: 6px; }
   * { box-sizing: border-box; }
-  body { margin: 0; min-height: 100vh; background: var(--papier); color: var(--encre); font-family: Arial, Helvetica, sans-serif;
-         font-size: 17px; line-height: 1.55; }
-  .page { max-width: 560px; margin: 0 auto; padding: 28px 16px 48px; }
-  header img { width: 150px; height: auto; display: block; }
-  .carte { margin-top: 28px; background: var(--blanc); border: var(--contour); border-radius: var(--rayon);
-           padding: 26px 22px; box-shadow: 6px 6px 0 var(--encre); }
-  h1 { margin: 0; font-family: &#39;Arial Black&#39;, Arial, Helvetica, sans-serif; font-weight: 900; font-size: 30px; line-height: 1.15; }
-  h1 span { background: var(--canari); padding: 0 6px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
-  p { margin: 14px 0 0; }
-  h2 { margin: 26px 0 0; font-family: &#39;Arial Black&#39;, Arial, Helvetica, sans-serif; font-weight: 900; font-size: 19px; line-height: 1.25; }
-  .petit { font-size: 15px; color: var(--secondaire); }
-  .boutons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-  .bouton { display: inline-block; background: var(--encre); color: var(--canari); border: 0; border-radius: var(--rayon-bouton);
-            padding: 13px 20px; font: bold 16px Arial, Helvetica, sans-serif; text-decoration: none; cursor: pointer; }
-  .bouton.second { background: var(--blanc); color: var(--encre); border: var(--contour); }
+  body { margin: 0; min-height: 100vh; background: var(--papier); color: var(--encre); font: 400 18px/1.55 Barlow,Arial,sans-serif;
+         -webkit-font-smoothing: antialiased; }
+  .barre { border-bottom: 1px solid var(--filet); }
+  .barre div, .page { max-width: 720px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+  .barre div { height: 72px; display: flex; align-items: center; }
+  .barre img { height: 42px; width: auto; display: block; }
+  .page { padding-top: 48px; padding-bottom: 64px; }
+  h1 { margin: 0; font: 800 clamp(36px, 6vw, 52px)/1.02 Barlow Semi Condensed,Arial Narrow,sans-serif; letter-spacing: -.012em; text-wrap: balance; }
+  h1 span { background: linear-gradient(transparent 60%, var(--canari) 60%, var(--canari) 92%, transparent 92%); }
+  p { margin: 16px 0 0; max-width: 36em; }
+  h2 { margin: 36px 0 0; padding-top: 16px; border-top: 2px solid var(--encre); font: 800 24px/1.2 Barlow Semi Condensed,Arial Narrow,sans-serif; }
+  .petit { font-size: 15px; color: var(--gris); }
+  .boutons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+  .bouton { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 22px;
+            background: var(--encre); color: var(--canari); border: 2px solid var(--encre); border-radius: var(--rayon-bouton);
+            font: 700 17px/1 Barlow,Arial,sans-serif; text-decoration: none; cursor: pointer; }
+  .bouton.second { background: transparent; color: var(--encre); }
+  .bouton:focus-visible, a:focus-visible { outline: 3px solid var(--canari); outline-offset: 2px; }
   a { color: var(--encre); }
+  .retour { max-width: none; margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--filet); font-size: 16px; font-weight: 600; }
+  @media (max-width: 640px) {
+    .barre div, .page { padding-left: 16px; padding-right: 16px; }
+    .barre div { height: 62px; } .barre img { height: 34px; }
+    .page { padding-top: 32px; } .bouton { width: 100%; }
+  }
 </style>
 </head>
 <body>
-<div class="page">
-  <header><a href="./"><img src="branding/logo-bamos-600.png" width="150" alt="Bamos"></a></header>
-  <div class="carte">
-    <h1>C’est <span>noté</span></h1>
-    <p>On vous prévient dès que Bamos part de votre aéroport.</p><p>Plus il y a d’inscrits au départ d’une ville, plus vite elle ouvre.</p>
-    
-    
-    
-  </div>
-  <p class="petit"><a href="./">Retour à l’accueil</a></p>
-</div>
+<header class="barre"><div><a href="/" aria-label="Bamos, accueil"><img src="/branding/logo-bamos-volet.svg" width="185" height="42" alt="Bamos"></a></div></header>
+<main class="page">
+  <h1>C’est <span>noté</span></h1>
+  <p>On vous prévient dès que Bamos part de votre aéroport.</p><p>Plus il y a d’inscrits au départ d’une ville, plus vite elle ouvre.</p>
+  
+  
+  
+  <p class="retour"><a href="/">Retour à l’accueil</a></p>
+</main>
 
 </body>
 </html>

@@ -80,7 +80,7 @@ section{padding:80px 0}
 .panneau-titre{font:800 28px/1 var(--titre);color:var(--canari)}
 .panneau-lieu{font:600 16px/1.2 var(--texte);color:var(--sur-encre)}
 .panneau-maj{margin-left:auto;font:600 14px/1.2 var(--texte);color:#A9A9B3}
-.panneau-cols,.panneau-ligne{display:grid;grid-template-columns:calc(5.4 * var(--fs)) minmax(0,1fr) calc(7.2 * var(--fs)) calc(4.6 * var(--fs));gap:8px;align-items:center}
+.panneau-cols,.panneau-ligne{display:grid;grid-template-columns:calc(6.5 * var(--fs)) minmax(0,1fr) calc(6.7 * var(--fs)) calc(4.6 * var(--fs));gap:8px;align-items:center}
 .panneau-cols{font:600 14px/1 var(--texte);color:#8E8E99;padding:14px 0 8px}
 .panneau-cols span{padding-left:.6em}
 .panneau-cols span:last-child{text-align:right;padding:0 .6em 0 0}
@@ -97,8 +97,10 @@ section{padding:80px 0}
 @media (prefers-reduced-motion:no-preference){
   .panneau .tuile{animation:volet .3s cubic-bezier(.3,.7,.4,1) backwards;animation-delay:calc(var(--i,0) * 60ms)}
 }
+/* Panneau étroit (écrans moyens) : un cran plus petit pour garder les noms de ville entiers */
+@container (min-width:471px) and (max-width:560px){.panneau-cols,.panneau-ligne{--fs:16px}}
 @container (max-width:470px){
-  .panneau-cols,.panneau-ligne{grid-template-columns:calc(5.4 * var(--fs)) minmax(0,1fr) calc(4.6 * var(--fs))}
+  .panneau-cols,.panneau-ligne{grid-template-columns:calc(6.5 * var(--fs)) minmax(0,1fr) calc(4.6 * var(--fs))}
   .panneau-ligne .r,.panneau-cols .r{display:none}
 }
 @media (max-width:640px){.panneau{--fs:15px}}
@@ -294,11 +296,11 @@ section{padding:80px 0}
 .board-maj{margin-left:auto;font:400 15px/1.2 var(--texte);color:#A9A9B3;text-align:right}
 .board-maj b{color:#7FE3BD;font-weight:700}
 .maj-court{display:none}
-.board-cols,.board-ligne{display:grid;grid-template-columns:120px minmax(0,1fr) 170px 110px 90px 12px;gap:10px;align-items:center}
+.board-cols,.board-ligne{display:grid;grid-template-columns:124px minmax(0,1fr) 170px 110px 90px 12px;gap:10px;align-items:center}
 .board-cols{font:600 14px/1 var(--texte);color:#8E8E99;padding:14px 10px 8px}
 .board-ligne{padding:12px 10px;border-bottom:1px solid #26262F;text-decoration:none;color:var(--papier);font:700 20px/1.2 var(--tableau);letter-spacing:.04em;border-radius:4px}
 .board-ligne:hover{background:#22222B}
-.board-ligne .d{color:var(--canari)}
+.board-ligne .d{color:var(--canari);white-space:nowrap}
 .board-ligne .v{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .board-ligne .pays-c{font-size:15px;color:#A9A9B3}
 .board-ligne .r{font-size:15px;color:#A9DBFF}
@@ -359,7 +361,7 @@ span.lien[data-o]{text-decoration:underline}
   .date-ligne .date-vol{grid-column:1 / -1;grid-row:2}
   .date-ligne .btn{grid-column:1 / -1}
   .coeur-large .photo{min-height:220px}
-  .board-cols,.board-ligne{grid-template-columns:96px minmax(0,1fr) 90px 72px 12px}
+  .board-cols,.board-ligne{grid-template-columns:116px minmax(0,1fr) 90px 72px 12px}
   .board .pays-c{display:none}
   .versus{grid-template-columns:minmax(0,1fr)}
   .versus-tete.seul,.versus-cel.seul{display:none}
@@ -386,7 +388,8 @@ span.lien[data-o]{text-decoration:underline}
   .saison{padding:10px 4px}.saison b{font-size:20px}
   .date-quand{font-size:19px}
   .board{padding:14px 10px}
-  .board-cols,.board-ligne{grid-template-columns:52px minmax(0,1fr) 54px 50px;gap:6px}
+  .board-cols,.board-ligne{grid-template-columns:78px minmax(0,1fr) 52px 48px;gap:6px}
+  .board-ligne .d{font-size:14px}
   .board-ligne{font-size:15px;padding:11px 4px}
   .board .fl{display:none}
   .board-titre{font-size:17px}
@@ -533,4 +536,10 @@ span.lien[data-o]{text-decoration:underline}
   .wp-carte .prix{grid-column:2;justify-self:start}
   .auteur{grid-template-columns:56px minmax(0,1fr);gap:14px}
   .auteur-avatar svg{width:56px;height:56px}
+}
+@media (max-width:360px){
+  .board-cols,.board-ligne{grid-template-columns:68px minmax(0,1fr) 46px 44px;gap:5px}
+  .board-ligne{font-size:14px}
+  .board-ligne .d{font-size:13px}
+  .board-ligne .r{font-size:13px}
 }
