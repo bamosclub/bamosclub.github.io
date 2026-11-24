@@ -284,7 +284,7 @@ section{padding:80px 0}
 .hub-hero .lead{margin-top:16px}
 .stats{display:flex;flex-wrap:wrap;gap:6px 28px;margin-top:8px;font-size:17px;color:var(--gris)}
 .stat{display:flex;gap:6px;align-items:baseline}
-.stat b{font:800 24px/1.1 var(--titre);color:var(--encre)}
+.stat b{font:800 24px/1.1 var(--titre);color:var(--encre);white-space:nowrap}
 .stat.jaune b{background:var(--canari);padding:0 6px;border-radius:3px}
 .filtres{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
 .filtre{border:1.5px solid var(--encre);border-radius:6px;padding:7px 14px;font:600 16px/1.2 var(--texte);background:transparent;color:var(--encre);cursor:pointer}
@@ -542,4 +542,24 @@ span.lien[data-o]{text-decoration:underline}
   .board-ligne{font-size:14px}
   .board-ligne .d{font-size:13px}
   .board-ligne .r{font-size:13px}
+}
+
+/* ===== Pages compagnie, pays et baromètre, mois par mois des pages de route ===== */
+.tableau-defile th.n,.tableau-defile td.n{text-align:right;white-space:nowrap}
+.tableau-defile td small{display:block;margin-top:4px;color:var(--gris);font-size:14px;font-weight:400}
+.tableau-defile .prix{font-size:19px}
+.tableau-defile .code{margin-left:8px;font:600 14px/1 var(--tableau);letter-spacing:.04em;color:var(--gris-clair)}
+.tableau-defile .rang{display:inline-block;min-width:1.6em;font:700 16px/1 var(--tableau);color:var(--gris-clair)}
+.vide{color:var(--gris-clair)}
+.baisse{color:#13795B;font-weight:700}.hausse{color:#B4351A;font-weight:700}
+.carte-texte{font-size:16px;line-height:1.45;color:var(--gris)}
+.methode{display:flex;flex-direction:column;gap:14px;max-width:46em;color:var(--gris)}
+@media (max-width:640px){
+  .tableau-empile table,.tableau-empile tbody{display:block}
+  .tableau-empile thead{display:none}
+  .tableau-empile tr{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:14px;padding:12px 0;border-bottom:1px solid var(--filet)}
+  .tableau-empile td{padding:0;border:0}
+  .tableau-empile td.n{grid-column:2;grid-row:1 / span 4;align-self:center}
+  .tableau-empile td[data-l]{font-size:15px;color:var(--gris)}
+  .tableau-empile td[data-l]::before{content:attr(data-l) " : "}
 }
