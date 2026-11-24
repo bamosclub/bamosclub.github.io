@@ -282,6 +282,8 @@ section{padding:80px 0}
 /* ===== Page d'un aéroport de départ ===== */
 .hub-hero{padding:24px 0 40px}
 .hub-hero .lead{margin-top:16px}
+.logo-compagnie{margin-bottom:18px}
+.encart-compagnie p{font-size:17px;color:var(--gris)}
 .stats{display:flex;flex-wrap:wrap;gap:6px 28px;margin-top:8px;font-size:17px;color:var(--gris)}
 .stat{display:flex;gap:6px;align-items:baseline}
 .stat b{font:800 24px/1.1 var(--titre);color:var(--encre);white-space:nowrap}
